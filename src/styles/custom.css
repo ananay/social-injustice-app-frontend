@@ -1,0 +1,48 @@
+/*
+ *  Custom CSS file for themeing the Paypal Social Injustice Index App
+ */
+
+
+* {
+    font-family: "CircularStd";
+}
+
+.navbar {
+    background-color: #0079C1;
+}
+
+.app_name {
+    margin-left: 20px;
+}
+
+.link {
+    margin-right: 30px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.link:hover {
+    border-bottom: 2px solid #eee;
+    color: #eee;
+}
+
+.active {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.scaffolded {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 100;
+    text-align: center;
+}
+
+
+.scaffolded p {
+    width: 550px;
+    margin-top: 30px;
+    color: #666;
+}
