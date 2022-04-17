@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/custom.css'
+import './styles/main.scss'
 import {FaPaypal} from 'react-icons/fa'
 import "@vetixy/circular-std"
 
