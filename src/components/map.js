@@ -35,16 +35,23 @@ const Map = (props) => {
                 .classed('stateMap', true)
                 .attr('fill', (d, i) => {
                     if (d.properties.name == props.selectedMapState) {
-                        return "#fff";
+                        return "#00457C";
                     } else {
                         return "#000";
                     }
                 })
-                .attr('stroke', "#fff")
+                .attr('stroke', (d, i) => {
+                    if (d.properties.name == props.selectedMapState) {
+                        return "#fff"
+                    } else {
+                        return "#0079C1"
+                    }
+
+                })
                 .on('mouseover', function (d, i) {
                     d3.select(this)
                         .transition()
-                        .style("fill", "#fff")
+                        .style("fill", "#00457C")
                 })
                 .on('mouseout', function (d, i) {
                     if (i.properties.name != props.selectedMapState) {

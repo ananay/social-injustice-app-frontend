@@ -65,7 +65,44 @@ body {
 
 #map_svg {
     width: 960px;
-    height: 800px;
+    height: 600px;
     display: block;
     margin: 0 auto
+}
+
+#us_state_dropdown {
+    padding: 30px;
+    border: none;
+    outline: none;
+}
+
+.dropdown_container {
+    width: 80%;
+    max-width: 500px;
+}
+
+.data {
+    margin-top: 50px;
+}
+
+.national_index {
+    color: #fff;
+    font-size: 18pt;
+    padding: 30px;
+}
+
+.metric {
+    display: inline-block;
+    padding: 30px;
+    min-width: 300px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .metric_value {
+        color: #fff;
+        font-size: 30pt;
+    }
+    .metric_name {
+        color: #ddd;
+        font-size: 16pt;
+    }
 }

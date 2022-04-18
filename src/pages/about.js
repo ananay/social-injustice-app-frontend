@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Header from "./header"
+import Header from "../components/header"
 import {FaPaypal} from 'react-icons/fa'
 
 const Home = () => {
