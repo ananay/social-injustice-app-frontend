@@ -21,7 +21,7 @@ const Map = (props) => {
             .projection(usaProjection);
 
 
-        let extent = [0, 1]
+        let extent = [0.5, 1]
 
         let selectedColor = d3.interpolateViridis;
 
