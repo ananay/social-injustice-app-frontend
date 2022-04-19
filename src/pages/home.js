@@ -34,11 +34,12 @@ const Home = () => {
         if (currentData.length == 0) {
             data_controller.get_latest_data().then((data) => {
                 setCurrentData(data)
-                // console.log()
             })
         }
 
     })
+
+
 
     return (
         <Header active={"home"}>
@@ -46,9 +47,11 @@ const Home = () => {
                 <div className={"scaffolded"}>
                     <h2>Welcome to <FaPaypal /> Social Injustice Index!</h2>
                 </div>
+
                 <Map
                     selectedMapState={selectedMapState}
                     setSelectedMapState={setSelectedMapState}
+                    currentData={currentData}
                 />
 
                 <h1 className="national_index">National Index: {currentData["national_index"]}</h1>

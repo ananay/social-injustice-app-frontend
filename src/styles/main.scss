@@ -6,7 +6,8 @@
     font-family: "CircularStd";
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -22,7 +23,7 @@ body {
 }
 
 .navbar {
-    background-color: #0079C1;
+    background-color: #0079c1;
 }
 
 .app_name {
@@ -62,12 +63,11 @@ body {
     color: #fff;
 }
 
-
 #map_svg {
     width: 960px;
     height: 600px;
     display: block;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 #us_state_dropdown {
@@ -105,4 +105,12 @@ body {
         color: #ddd;
         font-size: 16pt;
     }
+}
+
+#tooltip {
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: white;
+    position: absolute;
+    padding: 10px;
 }
