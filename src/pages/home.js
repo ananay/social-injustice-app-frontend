@@ -12,6 +12,12 @@ const Home = () => {
     const [selectedMapState, setSelectedMapState] = useState("Arizona");
     const [currentData, setCurrentData] = useState([])
     let states_list = []
+    let attributes_list = [
+        {"value": "index", label: "Index"},
+        {"value": "num_hate", label: "Number of Hate"},
+        {"value": "num_classfied", label: "Number of Classified"},
+        {"value": "normalized_index", label: "Normalized Index"}
+    ]
 
     // Reference to the state dropdown
     let state_dropdown = React.createRef()
@@ -45,7 +51,7 @@ const Home = () => {
         <Header active={"home"}>
             <center>
                 <div className={"scaffolded"}>
-                    <h2>Welcome to <FaPaypal /> Social Injustice Index!</h2>
+                    <h2>Welcome to Opportunity Hack Social Injustice Index!</h2>
                 </div>
 
                 <Map
@@ -62,10 +68,20 @@ const Home = () => {
                         value={{ value: selectedMapState, label: selectedMapState }}
                         options={states_list}
                         ref={state_dropdown}
+                        className={"dropdown"}
                         onChange={(state) => {
                             setSelectedMapState(state.value)
                         }}
                     ></Select>
+                    <Select
+                        defaultValue={{ value: "index", label: "Index"}}
+                        options={attributes_list}
+                        onChange={(state) => {
+                            // TODO: To be implemented
+                        }}
+                        className={"dropdown"}
+                    >
+                    </Select>
                 </div>
 
 
@@ -95,6 +111,7 @@ const Home = () => {
                                 <br />
                                 <span className={"metric_name"}>Normalized Index</span>
                             </div>
+                            <div id="tooltip"></div>
                         </div>
                     }
                 </div>

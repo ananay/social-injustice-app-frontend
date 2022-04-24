@@ -30,8 +30,7 @@ const Map = (props) => {
 
 
         let tooltip =
-            d3.select("body").append("div")
-                .attr("id", "tooltip")
+            d3.select("#tooltip")
                 .style("opacity", 0);
 
 
@@ -124,17 +123,19 @@ const Map = (props) => {
                     console.log(d.pageX)
                     console.log(d.pageY)
 
-                    tooltip
-                        .html(`
-                            <div>
-                                State: ${i.properties.name} <br />
-                                Index: ${props.currentData.states_index_data["index"][i.properties.name]}
-                            </div>
+                    if (props.currentData.states_index_data != undefined) {
+                        tooltip
+                            .html(`
+                        <div>
+                        State: ${i.properties.name} <br />
+                        Index: ${props.currentData.states_index_data["index"][i.properties.name]}
+                        </div>
                         `)
-                        .transition()
-                        .style("left", (d.pageX - 25) + "px")
-                        .style("top", (d.pageY + 40) + "px")
-                        .style("opacity", 1)
+                            .transition()
+                            .style("left", (d.pageX - 25) + "px")
+                            .style("top", (d.pageY + 40) + "px")
+                            .style("opacity", 1)
+                    }
 
                 })
                 .on('mouseout', function (d, i) {
@@ -155,6 +156,8 @@ const Map = (props) => {
                             .style("stroke-width", "1")
                             .style("stroke", "#0079C1")
                     }
+                    tooltip
+                        .style("opacity", 0)
                 })
                 .on('click', (d, i) => {
                     props.setSelectedMapState(i.properties.name);
