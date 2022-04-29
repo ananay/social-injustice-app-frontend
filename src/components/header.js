@@ -14,10 +14,10 @@ const Header = (props) => {
                         <span className={"paypal_logo"}><FaPaypal /></span>
                         <span className={"app_name"}>Social Injustice Index</span>
                     </Navbar.Brand>
-                    <Nav className="me-right">
+                    {/* <Nav className="me-right">
                         <Nav.Link className={props.active == "home" ? "link active" : "link"} href="/">Home</Nav.Link>
                         <Nav.Link className={props.active == "about" ? "link active" : "link"} href="/about">About this project</Nav.Link>
-                    </Nav>
+                    </Nav> */}
                 </Container>
             </Navbar>
             {props.children}

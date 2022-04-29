@@ -116,6 +116,8 @@ const Home = () => {
                         </div>
                     }
                 </div>
+                <br />
+                <p style={{"color": "#888"}}>Made by Shefali Deosthali, Zachary McHugh, Guoan Hu, Marquell David, Hunter Paulson and Ananay Arora for Paypal.</p>
             </center>
         </Header>
     )
