@@ -38,9 +38,10 @@ const Home = () => {
 
         // Grab the latest data
         if (currentData.length == 0) {
-            data_controller.get_latest_data().then((data) => {
-                setCurrentData(data)
-            })
+            setCurrentData(data_controller.get_latest_data())
+            // data_controller.get_latest_data().then((data) => {
+            //     setCurrentData(data)
+            // })
         }
 
     })
